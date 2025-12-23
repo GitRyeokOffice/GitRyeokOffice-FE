@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Flame, Sparkles, Users } from 'lucide-react';
 import toast from 'react-hot-toast';
 
@@ -21,10 +22,12 @@ export default function App() {
               <p className="text-sm text-slate-600">강동현 박찬빈 이창희 허석준 황혜림</p>
             </div>
 
-            <div className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white">
-              <Users className="h-4 w-4" />
-              우리팀
-            </div>
+            <Link
+              to="/team"
+              className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300"
+            >
+              <Users className="h-4 w-4" />팀 소개
+            </Link>
           </div>
         </header>
 
